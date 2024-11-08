@@ -1,0 +1,59 @@
+/* General Styles */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.widgets {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    width: 100%;
+    height: 280px; /* Set a uniform height */
+    border: 4px solid black;
+}
+
+.image-container {
+    width: 25%; /* Adjust the width of the image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.align-items {
+    center;
+}
+
+.vibrating-image {
+    width: 80%; /* Make the image a bit smaller */
+    animation: vibrate 0.05s infinite;
+}
+
+@keyframes vibrate {
+    0% { transform: translate(0) rotate(0); }
+    20% { transform: translate(-2px, 2px) rotate(-10deg); }
+    40% { transform: translate(-2px, -2px) rotate(1deg); }
+    60% { transform: translate(2px, 2px) rotate(-3deg); }
+    80% { transform: translate(2px, -2px) rotate(1deg); }
+    100% { transform: translate(0) rotate(0); }
+}
+
+/* Spooky and trippy background animation with more shades and quicker transition */
+body {
+    animation: spookyBackground 5s infinite alternate; /* Quicker transition */
+}
+
+@keyframes spookyBackground {
+    0% { background: linear-gradient(45deg, #eee, #ccc); }
+    20% { background: linear-gradient(45deg, #ccc, #bbb); }
+    40% { background: linear-gradient(45deg, #bbb, #aaa); }
+    60% { background: linear-gradient(45deg, #aaa, #999); }
+    80% { background: linear-gradient(45deg, #888, #777); }
+    100% { background: linear-gradient(45deg, #666, #444); }
+}
